@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	Hello!
+
+	<form action="results.php" method="post">
+		Name <input required name="name" type="text"> <br/>
+		Email <input required name="email" type="email"><br/>
+		Major: <br/>
+		<input required name="major" type="radio" value="Computer Science"> Computer Science <br/>
+		<input required name="major" type="radio" value="Web Development"> Web Development<br/>
+		<input required name="major" type="radio" value="CIT"> CIT<br/>
+		<input required name="major" type="radio" value="Comp. Eng."> Comp. Eng. <br/><br/>
+
+		Places you have visited: <br/>
+		<input name="visited[]" value="North America" type="checkbox"> North America <br/>
+		<input name="visited[]" value="South America" type="checkbox"> South America<br/>
+		<input name="visited[]" value="Europe" type="checkbox"> Europe<br/>
+		<input name="visited[]" value="Asia" type="checkbox"> Asia<br/>
+		<input name="visited[]" value="Other" type="checkbox"> Other<br/>
+
+		Comments <br/>
+		<textarea name="comments" rows="10" cols="32"></textarea>
+
+		<br/>
+		<input value="Submit" type="submit">
+
+
+	</form>
+</body>
+</html>
