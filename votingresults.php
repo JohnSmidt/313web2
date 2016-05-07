@@ -1,6 +1,7 @@
+<?php session_start()?>
 <?php  
     //var_dump($_POST);
-    session_start();
+    
     
     $name = $_POST["name"];
 	$quest = $_POST["quest"];
@@ -36,20 +37,15 @@
 	
 
 	// Check session id
-	if($_SESSION["isSet"] != True) {
+	if( !isset($_SESSION["vote$id"])) //if session variable is not set
+{
+	$_SESSION["vote$id"]=1;
 	$names[$name] = $names[$name] + 1;
 	$quests[$quest] = $quests[$quest] + 1;
 	$colors[$color] = $colors[$color] + 1;
 	$swallows[$swallow] = $swallows[$swallow] + 1;
 	$results = array($names, $quests, $colors, $swallows);
 	$results = json_encode($results);
-	$_SESSION["isSet"] = True;
-}
-
-	// $quests = json_encode($quests);
-	// $colors = json_encode($colors);
-	// $swallows = json_encode($swallows);
-
 	//insert votes to txt file
 	$insertvote = $results;
 	$fp = fopen($filename,"w");
@@ -59,6 +55,13 @@
 	fputs($fp,$insertvote);
 	fclose($fp);
 
+}
+
+	// $quests = json_encode($quests);
+	// $colors = json_encode($colors);
+	// $swallows = json_encode($swallows);
+
+	
 	
 
 ?><!DOCTYPE HTML>
