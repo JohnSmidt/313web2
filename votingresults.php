@@ -1,7 +1,7 @@
 <?php  
     //var_dump($_POST);
     session_start();
-    $_SESSION["isSet"] = True;
+    
     $name = $_POST["name"];
 	$quest = $_POST["quest"];
 	$color = $_POST["color"];
@@ -43,7 +43,9 @@
 	$swallows[$swallow] = $swallows[$swallow] + 1;
 	$results = array($names, $quests, $colors, $swallows);
 	$results = json_encode($results);
+	$_SESSION["isSet"] = True;
 }
+
 	// $quests = json_encode($quests);
 	// $colors = json_encode($colors);
 	// $swallows = json_encode($swallows);
