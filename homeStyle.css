@@ -50,7 +50,7 @@ a {
 	background-color:#eee;
 }
 .footer {
-	height:100px;
+	height:85px;
 	background-color:#e9b44c;
 }
 .image {
@@ -65,6 +65,9 @@ margin-top: 50px;
     height: 400px;
 
 }
+	.results {
+		margin-left: 50px;
+	}
 
 .wrapper {
         text-align: center;

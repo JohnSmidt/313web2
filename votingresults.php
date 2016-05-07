@@ -67,32 +67,40 @@
 ?><!DOCTYPE HTML>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="homeStyle.css" />
 </head>
 <body>
-	<h1>Results</h1>
+	<div class="container">
+		<h1>Results</h1></div>
+		<div class="results">
 	<h3> What is your name?</h3>
 		Arthur: <?= $names[0] ?> <br/>
 		Galahad: <?= $names[1] ?><br/>
 		Lancelot: <?= $names[2] ?><br/>
 		Robin: <?= $names[3] ?><br/>
-	<hr/>
+	</div><hr/>
+	<div class="results">
 	<h3> What is your quest?</h3>
 		Go to Camelot: <?= $quests[0] ?> <br/>
 		Run Away: <?= $quests[1] ?><br/>
 	 	SHUBBERIES!!!: <?= $quests[2] ?><br/>
 		Seek the Holy Grail: <?= $quests[3] ?><br/>
-	<hr/>
+	</div><hr/>
+	<div class="results">
 	<h3> What is your favorite color?</h3>
 		Green: <?= $colors[0] ?> <br/>
 		Red: <?= $colors[1] ?><br/>
 		Yellow: <?= $colors[2] ?><br/>
 		Blue, no wait, Gr-: <?= $colors[3] ?><br/>
-	<hr/>
+	</div><hr/>
+	<div class="results">
 	<h3> What is the air speed velocity of an unladen swallow?</h3>
 		42: <?= $swallows[0] ?> <br/>
 		~24 MPH: <?= $swallows[1] ?><br/>
 		COCONUTS: <?= $swallows[2] ?><br/>
 		Which one, African or European?: <?= $swallows[3] ?><br/>
-	<hr/>
+	</div>
+	<div class="footer">  </div>
+
 </body>
 </html>
