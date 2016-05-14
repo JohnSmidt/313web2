@@ -1,17 +1,10 @@
 <?php
-
 //var_dump($_POST);
-
 $name = $_POST["name"];
 $email = $_POST["email"];
 $major = $_POST["major"];
 $comments = $_POST["comments"];
-
-
-
-?>
-
-<!DOCTYPE HTML>
+?><!DOCTYPE HTML>
 <html>
 <head>
 </head>
@@ -24,16 +17,12 @@ $comments = $_POST["comments"];
 	Places you have visited: <br/>
 		<ul>
 			<?php 
-
 				foreach ($_POST["visited"] as $key => $value) {
-					
 					echo "<li>$value</li>";
 				}
-
 			?>
-		</ul>
-
+		</ul>    ryangr04@noa.nintendo.com     ryan graves
 <br/><br/>
 	Comments: <p><?= $comments ?></p>
-	</body>
-	</html>
+</body>
+</html>
