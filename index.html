@@ -1,8 +1,80 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-</head>
-<body>
-hello Openshift world!
-</body>
+	<head>
+		<title>Construct.io</title>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		 <script src="main.js"></script> 
+	</head>
+	<body class="indexBody">
+
+
+
+
+ <div id="login">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact">
+          <!-- 'FORM' STARTS HERE -->
+            <div id="form" name="form" >
+               <div class="pointer" onclick="div_hide()">Close</div>
+              <h2 id="titlelog">Log In</h2>
+              <h2 id="titlereg">Sign Up</h2>
+
+              <!-- Items unique to Sign in -->
+              <div id="sign_in">
+                <input class="input" id="email" name="email" placeholder="Email" type="text">
+                <div class="content-wrapper" name="test"> <content name="TEST" select="#login"></content></div>
+                <input class="input" id="password" name="password" placeholder="Password" type="password">
+              </div>
+
+              <!-- Items unique to Register -->
+              <div id="register">
+                <input class="input" id="username" name="email" placeholder="Email" type="text">
+                <input class="input" id="password" name="password" placeholder="Password" type="password">
+                <input class="input" id="confirm_password" name="confirm_password" placeholder="Confirm Password" type="password">
+                <div class="content-wrapper"> <content select="#register"></content></div>
+              </div>
+
+              <p id="errorMsgSign" class="errorMsg"></p>
+              <p id="errorMsgReg" class="errorMsg"></p>
+              <form  action="planetSelection.html">
+
+        <input id="submit" type="submit" value="Submit" onclick="div_hide()">
+
+    </form>
+              <p id="switch_log"><i>Don't have an account? <a href="javascript:switch_to_reg()">Register</a></i></p>
+              <p id="switch_reg"><i>Already have an account? <a href="javascript:switch_to_login()">Sign in</a></i></p>
+            <!-- Add Google, facebook, ect. later -->
+          </div>
+        </div>
+      </div>
+
+      
+
+
+
+
+
+
+		<div class="header">
+			<!-- <button class="login"> Log In/Sign Up </button> -->
+			<button id="popup" class="login" onclick="div_show()">Log In/Sign Up</button> Construct.io
+			<img src="icon.png" alt="Home Icon" height="20" width="42"> 
+		</div>
+			<!-- A call to action here -->
+			<div class="action">
+			
+			Create<br/> a<br/> World.
+		
+		</div><div class="center">
+
+    		<button class="submit" onclick="div_show()">Get Started</button>
+
+		<div>
+
+			<footer>
+				<!-- <div class="footer">
+					asdasd
+				</div> -->
+			</footer>
+	</body>
 </html>
