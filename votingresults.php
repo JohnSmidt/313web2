@@ -17,15 +17,15 @@
 	fclose($fp);
 
 	// used for clearing the voting
-	$names    = array(0, 0, 0, 0);
-	$quests   = array(0, 0, 0, 0);
-	$colors   = array(0, 0, 0, 0);
-	$swallows = array(0, 0, 0, 0);
+	// $names    = array(0, 0, 0, 0);
+	// $quests   = array(0, 0, 0, 0);
+	// $colors   = array(0, 0, 0, 0);
+	// $swallows = array(0, 0, 0, 0);
 
-	// $names    = array($read[0][0], $read[0][1], $read[0][2], $read[0][3]);
-	// $quests   = array($read[1][0], $read[1][1], $read[1][2], $read[1][3]);
-	// $colors   = array($read[2][0], $read[2][1], $read[2][2], $read[2][3]);
-	// $swallows = array($read[3][0], $read[3][1], $read[3][2], $read[3][3]);
+	$names    = array($read[0][0], $read[0][1], $read[0][2], $read[0][3]);
+	$quests   = array($read[1][0], $read[1][1], $read[1][2], $read[1][3]);
+	$colors   = array($read[2][0], $read[2][1], $read[2][2], $read[2][3]);
+	$swallows = array($read[3][0], $read[3][1], $read[3][2], $read[3][3]);
 
 	// Check session id
 	if( !isset($_SESSION["vote$id"])) // if session variable is not set
