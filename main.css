@@ -1,0 +1,272 @@
+* {
+ font-family: Arial;
+ color:#F8FFE5;
+}
+.indexBody {
+	background-color: #1C1847;
+	color:#F8FFE5;
+	margin: 0;
+	padding:0;
+	background-image: url("horizon.jpg");
+	background-size: cover;
+}
+.planets{
+	display: block;
+	width:975px;
+	height: auto;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+.selectionBody {
+	background-color: #000;
+	color:#F8FFE5;
+	margin: 0;
+	padding:0;
+}
+textarea {
+  color:black;
+}
+.header {
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #00D691;
+	color: #000;
+	margin: 0;
+	padding:0;
+	height: 50px;
+	position: relative;
+	-webkit-justify-content: space-between; 
+	justify-content: space-between; 
+	border-bottom: 5px solid rgba(0,0,0,0.5);
+}
+
+.pointer {
+	cursor: pointer;
+	margin:0;
+	padding: 0;
+	color:#5C5897;
+}
+
+input {
+	color: #1C1847;
+}
+.login {
+	margin: 0;
+	background-color: #00D691;
+	
+	/*height: 5px;*/
+	border: 2px;
+	padding: 11px;
+	font-size: 15px;
+	color: #1C1847;
+	
+	overflow: hidden;
+    margin-left:auto;
+    margin-right:0px;
+    border-radius: 8px;
+    border: #1C1847;
+	border-style: solid;
+	border-width: 2px;
+
+
+	/*position: absolute;
+  top: 50%;
+ 
+  margin-top: -23px;  account for padding and border if not using box-sizing: border-box;*/ 
+  margin-right: 5px;
+}
+.footer {
+	background-color:#000;
+
+}
+
+.action {
+	padding: 0;
+	font-size: 100px;
+	font-weight: bold;
+	text-align: center;
+
+}
+.container {
+	display: flex;
+}
+
+.center {
+	text-align: center;
+}
+
+
+.submit {
+	margin-top: 200px;
+	background-color: #1B9AAA;
+	border: 0;
+	/*height: 5px;*/
+	padding: 20px;
+	font-size: 50px;
+	
+	overflow: hidden;
+    margin-left:auto;
+    margin-right:0px;
+    color: #F8FFE5;
+	
+  border-bottom: 11px solid rgba(0,0,0,0.5);
+}
+
+.submit:hover {
+        animation: hoversub ease-in 0.1s;
+        animation-fill-mode: forwards;
+      } 
+
+      @keyframes hoversub {
+        from  {background-color: #1B9AAA; }
+        to    {background-color: #4BdAeA; }
+      }
+.login:hover {
+        animation: hoverlog ease-in 0.1s;
+        animation-fill-mode: forwards;
+
+      } 
+
+      @keyframes hoverlog {
+        from  {background-color: #00D691; }
+        to    {background-color: #1C1847; }
+        from {color:#1C1847;}
+        to    {color: #F8FFE5; }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      :host{  
+      }
+
+      .content-wrapper > ::content .input {
+        width: 82%;
+        padding: 10px;
+        margin-top: 30px;
+        border: var(--drawer-border-color);
+        padding-left: 40px;
+        font-size: 16px;
+      }
+
+
+      #login {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        position: fixed;
+        background: rgba(51, 51, 51, .85);
+        overflow: auto
+      }
+
+      #close {
+        position: absolute;
+        right: -14px;
+        top: -14px;
+        cursor: pointer
+      }
+
+      #close:click {
+        animation: fade-out 0.3s;
+      }
+
+      #popupContact {
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        top: 17%;
+        margin-left: -202px;
+        animation: fade-in 0.5s;
+      }
+
+      iron-icon{
+        color:white;
+      }
+
+      #form {
+        width: 300px;
+        padding: 10px 50px;
+        padding-bottom: 30px;
+        border-radius: 0px;
+        background-color: #F8FFE5;
+        border-bottom: 11px solid rgba(0,0,0,0.5);
+      }
+
+      #titlelog, #titlereg {
+        background-color: #F8FFE5;
+        color:#1C1847;
+        text-shadow: var(--text-shadow);
+        padding: 20px 35px;
+       margin:0;
+        text-align: center;
+      }
+
+      @keyframes fade-in {
+        from  {opacity: 0; }
+        to    {opacity: 1; }
+      }
+
+      @keyframes fade-out {
+        from  {opacity: 1; }
+        to    {opacity: 0; }
+      }
+
+      .input {
+        width: 82%;
+        padding: 10px;
+        margin-top: 30px;
+        
+        border: 2px solid #000;
+        padding-left: 40px;
+        font-size: 16px;
+      }
+      
+      #submit {
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+        background-color: #EF476F;
+        color: var(--text-primary-color);
+        border: 0px;
+        padding: 10px 0;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 0px;
+        text-shadow: var(--text-shadow);
+        border-bottom: 5px solid var(--button-color-secondary);
+        cursor: pointer;
+        margin-top: 50px;
+        border-bottom: 5px solid rgba(0,0,0,0.5);
+      }
+
+      #submit:hover {
+              animation: hover ease-in 0.1s;
+              animation-fill-mode: forwards;
+            } 
+
+      .right {
+        text-align: right;
+      }
+
+      .errorMsg {
+        color: red;
+        font-style: italic;
+      }
