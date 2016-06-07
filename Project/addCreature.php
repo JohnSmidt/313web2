@@ -2,8 +2,6 @@
 
 require("dbConnect.php");
 $move = "/Users/John/Desktop/web2/php/Project/assets/";
-$dbHosts = getenv('OPENSHIFT_HOMEDIR');
-$dbHosts = $dbHosts . "app-root/data/file"
 $db = connectToDb();
 $biomeId = $_GET['id'];
 $name = htmlspecialchars($_POST['name']);
@@ -22,7 +20,7 @@ $stmt->bindValue(":image_name", $image_name, PDO::PARAM_LOB);
 $stmt->execute();
 
  // Writes the photo to the server
-if (move_uploaded_file($_FILES['image']['tmp_name'], $dbHosts . $_FILES["image"]['name'])) {
+if (move_uploaded_file($_FILES['image']['tmp_name'], $move . $_FILES["image"]['name'])) {
     echo "Uploaded";
 } else {
    echo "File was not uploaded";
