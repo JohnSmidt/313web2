@@ -26,6 +26,6 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $move . $_FILES["image"]['n
    echo "File was not uploaded";
 }
 
-header("Location: biome.php");
+header("Location: biome.php?id=$biomeId");
 //die("Page should have been redirected");
 ?>
