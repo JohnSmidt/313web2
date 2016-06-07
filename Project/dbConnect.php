@@ -10,7 +10,7 @@ function connectToDb()
   $dbUser = "";
   $dbPassword = "";
 
-     $dbName = "testdb";
+     $dbName = "construct";
 
      $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
       echo $openShiftVar;
