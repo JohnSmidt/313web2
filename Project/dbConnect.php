@@ -1,21 +1,4 @@
-<?php
 
-// function connectToDb() {
-
-
-// 	try
-// 	{
-// 		$user = 'steve';
-// 		$password = 'nerdface';
-// 		$db = new PDO('mysql:host=localhost;dbname=construct', $user, $password);
-// 	}
-// 	catch (PODException $ex) {
-// 	echo "Error: " . $ex->getMessage();
-// 	die();
-// 	}
-// }
-
-?>
 
 <?php
 
@@ -27,15 +10,16 @@ function connectToDb()
   $dbUser = "steve";
   $dbPassword = "nerdface";
 
-     $dbName = "construct";
+     $dbName = "testdb";
 
      $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+     // echo $openShiftVar;
 
      if ($openShiftVar === null || $openShiftVar == "")
      {
           // Not in the openshift environment
           //echo "Using local credentials: ";
-          require("setLocalDatabaseCredentials.php");
+          //require("setLocalDatabaseCredentials.php");
      }
      else
      {
@@ -49,7 +33,7 @@ function connectToDb()
      }
      //echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
 
-     $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+     $db = new PDO("mysql:host=localhost;dbname=construct", $dbUser, $dbPassword);
 
      return $db;
 
