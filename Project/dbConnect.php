@@ -31,7 +31,11 @@ function connectToDb()
           $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
           $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
           $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-          //$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+          echo "$dbHost \n";
+          echo "$dbPort \n";
+          echo "$dbUser \n";
+          echo "$dbPassword \n";
+          $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
      }
      echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
 
