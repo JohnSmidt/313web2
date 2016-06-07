@@ -10,6 +10,9 @@
 	background-image: url("horizon.jpg");
 	background-size: cover;
 }
+.sign {
+  color: #000;
+}
 .planets{
 	display: block;
 	width:975px;
@@ -26,6 +29,9 @@
 }
 textarea {
   color:black;
+}
+#fileToUpload {
+  color: red;
 }
 .header {
 	-ms-box-orient: horizontal;

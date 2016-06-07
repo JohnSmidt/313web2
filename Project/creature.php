@@ -5,7 +5,7 @@ $db = connectToDb();
 
 $id = $_GET['id'];
 	
-	$query = "SELECT name, description, id FROM creatures WHERE id=:id";
+	$query = "SELECT name, description, id, image FROM creatures WHERE id=:id";
 	$stmt = $db->prepare($query);
 	$stmt->bindValue(":id", $id, PDO::PARAM_INT);
 	$stmt->execute();
@@ -27,6 +27,7 @@ $id = $_GET['id'];
 	<h1><?=$creatures['name']?></h1>
 	<ul>
 		<li><h4>Description:</h4> <?=$creatures['description']?></li>
+		<li><h4>Image:</h4> <img src="assets/<?=$creatures['image']?>"></img></li>
 	</ul>
 
 </body>

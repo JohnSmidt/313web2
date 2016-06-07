@@ -5,7 +5,7 @@ $db = connectToDb();
 
 $id = $_GET['id'];
 	
-	$query = "SELECT name, description, id FROM biomes WHERE id=:id";
+	$query = "SELECT name, description, id, image FROM biomes WHERE id=:id";
 	$stmt = $db->prepare($query);
 	$stmt->bindValue(":id", $id, PDO::PARAM_INT);
 	$stmt->execute();
@@ -33,14 +33,15 @@ $id = $_GET['id'];
 	<h1><?=$biomes['name']?></h1>
 	<ul>
 		<li><h4>Description:</h4> <?=$biomes['description']?></li>
+		<li><h4>Image:</h4> <img src="assets/<?=$biomes['image']?>"></img></li>
 		<li><h4>Creatures found in this biome: </li>
 		<?php
 		//var_dump($db);
 		foreach ($creatures as $creature) {
-			$id = $creature['id'];
+			$tempid = $creature['id'];
 			$name = $creature['name'];
 			$description = $creature['description'];
-					echo "<li><a href='creature.php?id=$id'>" . $creature['name'] . "</a></li>";
+					echo "<li><a href='creature.php?id=$tempid'>" . $creature['name'] . "</a></li>";
 				}
 		?>
 
@@ -50,10 +51,10 @@ $id = $_GET['id'];
 <h3>--Any newly found creatures are to be added below--</h3>
 
 
-	<form action="addCreature.php?id=<?=$id?>" method="POST">
+	<form action="addCreature.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
 		Name of creature: <input type="text" name="name" placeholder="Name"></input><br/>
 		Description of creature: <textarea name="description" placeholder="Description"></textarea><br/>
-		<input type="file" id="files" name="files[]" multiple />
+		<input type="file" id="fileToUpload" name="image">
 <output id="list"></output>
 
 <script>

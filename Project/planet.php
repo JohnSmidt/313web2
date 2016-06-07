@@ -35,10 +35,10 @@ $id = $_GET['id'];
 		<?php
 		//var_dump($db);
 		foreach ($biomes as $biome) {
-			$id = $biome['id'];
+			$tempid = $biome['id'];
 			$name = $biome['name'];
 			$description = $biome['description'];
-					echo "<li><a href='biome.php?id=$id'>" . $biome['name'] . "</a></li>";
+					echo "<li><a href='biome.php?id=$tempid'>" . $biome['name'] . "</a></li>";
 				}
 		?>
 
@@ -48,29 +48,30 @@ $id = $_GET['id'];
 <h3>--Any newly found biomes are to be added below--</h3>
 
 
-	<form action="addBiome.php?id=<?=$id?>" method="POST">
+	<form action="addBiome.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
 		Name of biome: <input type="text" name="name" placeholder="Name"></input><br/>
 		Description of biome: <textarea name="description" placeholder="Description"></textarea><br/>
-		<input type="file" id="files" name="files[]" multiple />
+		<input type="file" id="fileToUpload" name="image">
+		
 <output id="list"></output>
 
 <script>
-  // function handleFileSelect(evt) {
-  //   var files = evt.target.files; // FileList object
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
 
-  //   // files is a FileList of File objects. List some properties.
-  //   var output = [];
-  //   for (var i = 0, f; f = files[i]; i++) {
-  //     output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-  //                 f.size, ' bytes, last modified: ',
-  //                 f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-  //                 '</li>');
-  //   }
-  //   console.log(output);
-  //   document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  // }
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    console.log(output);
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
 
-  // document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 		<input type="submit" value="Add Biome"></input>
 	</form>
