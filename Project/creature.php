@@ -11,7 +11,9 @@ $id = $_GET['id'];
 	$stmt->execute();
 	//$movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	$creatures = $stmt->fetch(PDO::FETCH_ASSOC);
+	$dbHosts = getenv('OPENSHIFT_HOMEDIR');
 
+	echo $dbHosts;
 	?>
 
 
