@@ -29,7 +29,7 @@ $id = $_GET['id'];
 	<h1><?=$creatures['name']?></h1>
 	<ul>
 		<li><h4>Description:</h4> <?=$creatures['description']?></li>
-		<li><h4>Image:</h4> <img src="assets/<?=$creatures['image']?>"></img></li>
+		<li><h4>Image:</h4> <img class="entity" src="assets/<?=$creatures['image']?>"></img></li>
 	</ul>
 
 </body>

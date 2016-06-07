@@ -33,7 +33,7 @@ $id = $_GET['id'];
 	<h1><?=$biomes['name']?></h1>
 	<ul>
 		<li><h4>Description:</h4> <?=$biomes['description']?></li>
-		<li><h4>Image:</h4> <img src="assets/<?=$biomes['image']?>"></img></li>
+		<li><h4>Image:</h4> <img class="entity" src="assets/<?=$biomes['image']?>"></img></li>
 		<li><h4>Creatures found in this biome: </li>
 		<?php
 		//var_dump($db);
@@ -47,7 +47,7 @@ $id = $_GET['id'];
 
 	
 	</ul>
-
+<div class="center">
 <h3>--Any newly found creatures are to be added below--</h3>
 
 
@@ -57,25 +57,9 @@ $id = $_GET['id'];
 		<input type="file" id="fileToUpload" name="image">
 <output id="list"></output>
 
-<script>
-  // function handleFileSelect(evt) {
-  //   var files = evt.target.files; // FileList object
 
-  //   // files is a FileList of File objects. List some properties.
-  //   var output = [];
-  //   for (var i = 0, f; f = files[i]; i++) {
-  //     output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-  //                 f.size, ' bytes, last modified: ',
-  //                 f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-  //                 '</li>');
-  //   }
-  //   console.log(output);
-  //   document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  // }
-
-  // document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
 		<input type="submit" value="Add Creature"></input>
 	</form>
+</div>
 </body>
 </html>
